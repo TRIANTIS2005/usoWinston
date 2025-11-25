@@ -1,5 +1,5 @@
 const { getAge, getUUID } = require('./plugins');
-
+const {BuildLogger} = require('./plugins/index')
 // const { emailTemplate } = require('./js-foundation/01-template');
 // require('./js-foundation/02-destructuring');
 // const { getUserById } = require('./js-foundation/03-callbacks');
@@ -7,13 +7,17 @@ const { getAge, getUUID } = require('./plugins');
 // const { buildMakePerson } = require('./js-foundation/05-factory')
 const getPokemonById = require('./js-foundation/06-promises');
 
+const mensaje = BuildLogger('app.js')
 
 getPokemonById(4)
   .then( ( pokemon ) => console.log({ pokemon }) )
   .catch( ( err ) => console.log( err ) )
   .finally( () => console.log('Finalmente') );
 
-
+mensaje.log("programa finalizado")
+mensaje.log("programa todo fue un exito")
+mensaje.error('se cayo la base de datos')
+mensaje.warn('hay una version desactualizada actualizar')
 
 // token de acceso
 // Publicas
