@@ -17,7 +17,9 @@ getPokemonById(4)
 mensaje.log("programa finalizado")
 mensaje.log("programa todo fue un exito")
 mensaje.error('se cayo la base de datos')
-mensaje.warn('hay una version desactualizada actualizar')
+// mensaje.warn('hay una version desactualizada actualizar')
+
+
 
 // token de acceso
 // Publicas
